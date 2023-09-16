@@ -1,0 +1,4 @@
+﻿D:\Visal Studio\Main\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: промежуточный каталог (x64\Debug\) содержит файлы, которые используются совместно с другим проектом (Project1.vcxproj).  Это может привести к ошибкам очистки и перестроения.
+  LabJob1C++.cpp
+D:\VSrepos\VS2022\Project1\Project1\LabJob1C++.cpp(64,10): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+  Project1.vcxproj -> D:\VSrepos\VS2022\Project1\x64\Debug\C++FirstJob.exe
