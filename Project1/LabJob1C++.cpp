@@ -6,63 +6,54 @@ using namespace std;
 int main()
 {
 	setlocale(LC_ALL, "Russian");
+	
 	double x;
-	double y;
-	double d;
-	double d1;
-	double d2;
-	double dd;
-	int nd;
-	double e = exp(1);
+	double a;
+	double b;
+	long double f2;
+	long double f;
+	string ff;
+	string fs;
 
-	HANDLE Yellow = GetStdHandle(STD_OUTPUT_HANDLE);
-	SetConsoleTextAttribute(Yellow, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
-	cout << "Экспонента = ";
-	cout << e << endl;
-
-	SetConsoleTextAttribute(Yellow, FOREGROUND_BLUE | FOREGROUND_INTENSITY);
-	cout << "Задание: ";
-	SetConsoleTextAttribute(Yellow, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
-	cout << "Вычислить значение арифметического выражения. ";
-	SetConsoleTextAttribute(Yellow, FOREGROUND_RED | FOREGROUND_GREEN);
-	cout << "x, y - исходные данные" <<endl;
-	SetConsoleTextAttribute(Yellow, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
-
-	cout << "Введите значение X..." << endl;
+	cout << "Введите X... \n";
 	cin >> x;
-	cout << endl;
+	cout << "Введите A... \n";
+	cin >> a;
+	cout << "Введите B... \n";
+	cin >> b;
 
-	cout << "Введите значение Y..." << endl;
-	cin >> y;
-	cout << endl;
+	if (x > 0 && x <= 1) {
+		string f1 = "0 < x <= 1 | f = miel = ";
+		double miel = (x - a) / (x);
+		if (miel > (sqrt(a)+x) || miel > sin(x)) {
+			miel = (sqrt(a)+x);
+			if (miel > sin(x)) {
+				miel = sin(x);
+			}
+		}
+		f2 = miel;
+		ff = f1;
+	}
+	else if (x > 1) {
+		string f1 = "x > 1 | f = mael = ";
+		double mael = sqrt(x);
+		if (mael < a * x) {
+			mael = a * x;
+		}
+		f2 = mael;
+		ff = f1;
+	}
+	else if (x <= 0) {
+		string f1 = "x <= 0 | f = ax + b = ";
+		double el = a * x + b;
+		f2 = el;
+		ff = f1;
+	}
+	f = f2;
+	fs = ff;
 
-	d = (x * pow(e, x * y) + 8 * pow(sin(x), 2))/(x*(x-y)*(3*x+y));
+	cout << ff;
+	cout << f2 << endl;
 
-	cout << "d = ";
-	cout << d << endl;
-
-	d1 = x*pow(e,x*y)+8*pow(sin(x),2);
-	d2 = x * (x - y) * (3 * x + y);
-	dd = d1 / d2;
-
-	cout << "dd = ";
-	cout << dd << endl;
-	cout << endl;
-
-	SetConsoleTextAttribute(Yellow, FOREGROUND_BLUE | FOREGROUND_INTENSITY);
-	cout << "Задание: ";
-	SetConsoleTextAttribute(Yellow, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
-	cout << "Преобразовать вещественные данные в целые.";
-	SetConsoleTextAttribute(Yellow, FOREGROUND_RED | FOREGROUND_GREEN);
-	cout << "([*] - целая часть числа)" << endl;
-	SetConsoleTextAttribute(Yellow, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
-
-
-	cout << "m = ";
-	cout << d << endl;
-
-	nd = d1 / d2;
-	cout << "n = ";
-	cout << nd << endl;
 	system("pause");
 }
